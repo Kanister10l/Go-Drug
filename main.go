@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"os/signal"
@@ -32,6 +33,7 @@ func main() {
 
 	go func() {
 		signal := <-signalChannel
+		sugar.Info(fmt.Sprintf("Captured %s Signal", signal.String()))
 		if signal.String() == "interrupt" {
 			stopApi <- true
 		}
