@@ -11,6 +11,10 @@
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+#ignore vscode configuration files
+.vscode
+
 #Miscelanous files
 version.go
 Go-Drug
+run.sh
